@@ -25,4 +25,9 @@ public class HelloController {
     public String sayHelloUsingPostMapping(@RequestBody DataUser user){
         return "Hello "+user.getFirstName()+" "+user.getLastName()+" from BridgeLabz";
     }
+
+    @PutMapping("/put/{lastName}")
+    public String sayHelloUsingBoth(@PathVariable String lastName, @RequestBody DataUser user){
+        return "Hello " + user.getFirstName() + " " + lastName + " from BridgeLabz";
+    }
 }
