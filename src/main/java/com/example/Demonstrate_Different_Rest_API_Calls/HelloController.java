@@ -21,5 +21,8 @@ public class HelloController {
         return "Hello "+name+" from BridgeLabz";
     }
 
-
+    @PostMapping("/post")
+    public String sayHelloUsingPostMapping(@RequestBody DataUser user){
+        return "Hello "+user.getFirstName()+" "+user.getLastName()+" from BridgeLabz";
+    }
 }
